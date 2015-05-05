@@ -1,4 +1,5 @@
 <%= form_for [@user, @user.items.build], remote: true do |f| %>
+
 	<div class="form-group">
 		<%= f.text_field :name, class: 'form-control', placeholder: "Enter ToDo Item" %>
 	</div>
