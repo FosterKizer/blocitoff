@@ -14,8 +14,9 @@ users = User.all
 
 75.times do
 	Item.create!(
-		user:	users.sample,
-		name:	Faker::Lorem.sentence
+		user:		users.sample,
+		name:		Faker::Lorem.sentence,
+		created_at:	Faker::Date.backward(7)
 	)
 end
 items = Item.all
