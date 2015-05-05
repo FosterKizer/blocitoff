@@ -16,7 +16,7 @@ users = User.all
 	Item.create!(
 		user:		users.sample,
 		name:		Faker::Lorem.sentence,
-		created_at:	Faker::Date.backward(7)
+		created_at:	Faker::Date.backward(9)
 	)
 end
 items = Item.all
@@ -25,7 +25,8 @@ user = User.first
 user.skip_reconfirmation!
 user.update_attributes!(
 	email: 'kizer713@gmail.com',
-	password: 'Drummer13'
+	password: 'Drummer13',
+	name: 'Foster'
 )
 
 puts "Seed finished"
